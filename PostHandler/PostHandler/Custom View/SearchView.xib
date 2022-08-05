@@ -31,6 +31,9 @@
                             <real key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="l5Y-2C-BI4"/>
+                    </connections>
                 </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Fmc-7N-sBc"/>

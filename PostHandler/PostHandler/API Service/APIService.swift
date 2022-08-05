@@ -12,13 +12,8 @@ enum HTTPMethod: String {
     case post = "POST"
 }
 
-class APIService {
-    public static let shared = APIService()
-
-    func callService<T: Decodable>(urlString: String,
-                                   httpMethod: HTTPMethod = .get,
-                                   success:@escaping (T) -> Void,
-                                   failure:@escaping (Error) -> Void) {
+struct APIService {
+    static func callService<T: Decodable>(urlString: String, httpMethod: HTTPMethod = .get, success:@escaping (T) -> Void, failure:@escaping (Error) -> Void) {
         guard let url = URL(string: urlString) else {
             failure(CustomError.emptyURL)
             return
@@ -45,6 +40,5 @@ class APIService {
 
         }
         datatask.resume()
-
     }
 }

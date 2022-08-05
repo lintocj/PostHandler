@@ -11,7 +11,7 @@ enum Environment {
     case production
 
     func baseURL() -> String {
-        return "\(urlProtocol())://\(domain()))"
+        return "\(urlProtocol())://\(domain())"
     }
 
     func urlProtocol() -> String {
@@ -39,4 +39,5 @@ let baseUrl = Environment.production.baseURL()
 
 struct Path {
     var posts: String { return "\(baseUrl)/posts" }
+    var comments: String { return "\(baseUrl)/comments" }
 }

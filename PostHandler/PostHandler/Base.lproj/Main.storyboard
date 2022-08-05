@@ -97,17 +97,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3u-wT-Wh1" customClass="SearchView" customModule="PostHandler" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ike-mV-EG1"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9sU-X0-wVw">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CommentTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentTableViewCell" id="ZcA-x5-hxo" customClass="CommentTableViewCell" customModule="PostHandler" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CommentTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentTableViewCell" rowHeight="171" id="ZcA-x5-hxo" customClass="CommentTableViewCell" customModule="PostHandler" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZcA-x5-hxo" id="Eyf-YE-qQh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uo0-xi-6jI">
+                                                    <rect key="frame" x="36" y="21" width="342" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5Q-JP-1zU">
+                                                    <rect key="frame" x="36" y="129.5" width="342" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="emailID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdH-V8-E20">
+                                                    <rect key="frame" x="36" y="51.5" width="56.5" height="67"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uo0-xi-6jI" secondAttribute="trailing" constant="16" id="3nr-NI-iLX"/>
+                                                <constraint firstItem="uo0-xi-6jI" firstAttribute="top" secondItem="Eyf-YE-qQh" secondAttribute="topMargin" constant="10" id="6BN-j1-kx3"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EdH-V8-E20" secondAttribute="trailing" constant="20" symbolic="YES" id="M0M-EP-FwL"/>
+                                                <constraint firstItem="EdH-V8-E20" firstAttribute="top" secondItem="uo0-xi-6jI" secondAttribute="bottom" constant="10" id="T5z-JI-V3S"/>
+                                                <constraint firstItem="x5Q-JP-1zU" firstAttribute="top" secondItem="EdH-V8-E20" secondAttribute="bottom" constant="11" id="Wvr-py-aOw"/>
+                                                <constraint firstItem="x5Q-JP-1zU" firstAttribute="leading" secondItem="Eyf-YE-qQh" secondAttribute="leadingMargin" constant="16" id="ixW-Ex-i90"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="x5Q-JP-1zU" secondAttribute="bottom" constant="10" id="kr3-pz-Jrv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="x5Q-JP-1zU" secondAttribute="trailing" constant="16" id="q7r-Lj-aub"/>
+                                                <constraint firstItem="uo0-xi-6jI" firstAttribute="leading" secondItem="Eyf-YE-qQh" secondAttribute="leadingMargin" constant="16" id="wzL-t4-A8b"/>
+                                                <constraint firstItem="EdH-V8-E20" firstAttribute="leading" secondItem="Eyf-YE-qQh" secondAttribute="leadingMargin" constant="16" id="yPE-yJ-dJ9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblDesc" destination="x5Q-JP-1zU" id="10R-7w-MUy"/>
+                                            <outlet property="lblEmailID" destination="EdH-V8-E20" id="ft5-BU-XvE"/>
+                                            <outlet property="lblTitle" destination="uo0-xi-6jI" id="tqN-ah-isj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -121,17 +165,21 @@
                         <constraints>
                             <constraint firstItem="Qom-KN-PQQ" firstAttribute="trailing" secondItem="9sU-X0-wVw" secondAttribute="trailing" id="40e-kE-K3t"/>
                             <constraint firstItem="9sU-X0-wVw" firstAttribute="leading" secondItem="Qom-KN-PQQ" secondAttribute="leading" id="TwS-fK-8cK"/>
-                            <constraint firstItem="9sU-X0-wVw" firstAttribute="top" secondItem="Qom-KN-PQQ" secondAttribute="top" id="g6c-80-nj0"/>
+                            <constraint firstItem="C3u-wT-Wh1" firstAttribute="top" secondItem="Aga-wn-OLz" secondAttribute="top" id="ay1-7p-2dz"/>
+                            <constraint firstItem="9sU-X0-wVw" firstAttribute="top" secondItem="C3u-wT-Wh1" secondAttribute="bottom" id="cc6-aE-pL8"/>
+                            <constraint firstAttribute="trailing" secondItem="C3u-wT-Wh1" secondAttribute="trailing" id="iFQ-s1-oOP"/>
                             <constraint firstItem="Qom-KN-PQQ" firstAttribute="bottom" secondItem="9sU-X0-wVw" secondAttribute="bottom" id="m0S-Ao-FX3"/>
+                            <constraint firstItem="C3u-wT-Wh1" firstAttribute="leading" secondItem="Qom-KN-PQQ" secondAttribute="leading" id="oVa-vw-9Yf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchView" destination="C3u-wT-Wh1" id="f5x-DG-kew"/>
                         <outlet property="tableView" destination="9sU-X0-wVw" id="9TV-mB-xCK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXD-QP-eUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829" y="40"/>
+            <point key="canvasLocation" x="2828.985507246377" y="39.508928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V81-tn-Rmz">

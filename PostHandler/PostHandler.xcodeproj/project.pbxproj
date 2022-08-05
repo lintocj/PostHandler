@@ -31,6 +31,7 @@
 		558EA5A4289D61BB0052DCDD /* PostDetailedHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558EA5A2289D61BB0052DCDD /* PostDetailedHeaderTableViewCell.xib */; };
 		558EA5A6289D67360052DCDD /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA5A5289D67360052DCDD /* CommentTableViewCell.swift */; };
 		558EA5A8289D80790052DCDD /* CommentDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA5A7289D80790052DCDD /* CommentDataViewModel.swift */; };
+		558EA5AA289D853B0052DCDD /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA5A9289D853B0052DCDD /* Comments.swift */; };
 		58B1F1A86E34FE048219647A /* Pods_PostHandlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A609002C41CD7FBCBF37E4FE /* Pods_PostHandlerTests.framework */; };
 		ECEBE62C21967DD819085A87 /* Pods_PostHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4594E10A026463CC42C001B1 /* Pods_PostHandler.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		558EA5A2289D61BB0052DCDD /* PostDetailedHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailedHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		558EA5A5289D67360052DCDD /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		558EA5A7289D80790052DCDD /* CommentDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDataViewModel.swift; sourceTree = "<group>"; };
+		558EA5A9289D853B0052DCDD /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		8AEDE40D207CC69DB2F65764 /* Pods-PostHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandler.release.xcconfig"; path = "Target Support Files/Pods-PostHandler/Pods-PostHandler.release.xcconfig"; sourceTree = "<group>"; };
 		A565D0E29884CCB434529098 /* Pods-PostHandlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandlerTests.release.xcconfig"; path = "Target Support Files/Pods-PostHandlerTests/Pods-PostHandlerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A609002C41CD7FBCBF37E4FE /* Pods_PostHandlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostHandlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				558EA583289CFC7B0052DCDD /* Posts.swift */,
+				558EA5A9289D853B0052DCDD /* Comments.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				558EA5A6289D67360052DCDD /* CommentTableViewCell.swift in Sources */,
 				558EA58A289D0F080052DCDD /* ErrorHandler.swift in Sources */,
 				558EA549289CF1670052DCDD /* SceneDelegate.swift in Sources */,
+				558EA5AA289D853B0052DCDD /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

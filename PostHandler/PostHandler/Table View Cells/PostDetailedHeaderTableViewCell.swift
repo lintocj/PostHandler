@@ -27,7 +27,7 @@ class PostDetailedHeaderTableViewCell: UITableViewHeaderFooterView {
 
     func setUpUI() {
         lblTitle.text = postDataUpdate?.title
-        lblTitle.text = postDataUpdate?.body
+        lblDesc.text = postDataUpdate?.body
     }
 
 }

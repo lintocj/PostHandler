@@ -1,0 +1,21 @@
+disabled_rules:
+  - line_length
+  - nesting
+  - vertical_whitespace
+  - trailing_whitespace 
+opt_in_rules:
+  - empty_count
+
+
+  # rules that have both warning and error levels, can set just the warning level
+# implicitly
+type_body_length:
+  - 300 # warning
+  - 400 # error
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 1200
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods

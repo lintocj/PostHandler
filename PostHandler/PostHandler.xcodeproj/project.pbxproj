@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5347F3A6CA0FA598810B0819 /* Pods_PostHandler_PostHandlerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF82F5A0A5D2B5C9C4C48A7 /* Pods_PostHandler_PostHandlerUITests.framework */; };
 		558EA547289CF1670052DCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA546289CF1670052DCDD /* AppDelegate.swift */; };
 		558EA549289CF1670052DCDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA548289CF1670052DCDD /* SceneDelegate.swift */; };
-		558EA54B289CF1670052DCDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA54A289CF1670052DCDD /* ViewController.swift */; };
 		558EA54E289CF1670052DCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558EA54C289CF1670052DCDD /* Main.storyboard */; };
 		558EA550289CF1690052DCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558EA54F289CF1690052DCDD /* Assets.xcassets */; };
 		558EA553289CF1690052DCDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558EA551289CF1690052DCDD /* LaunchScreen.storyboard */; };
 		558EA55E289CF16A0052DCDD /* PostHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA55D289CF16A0052DCDD /* PostHandlerTests.swift */; };
 		558EA568289CF16A0052DCDD /* PostHandlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA567289CF16A0052DCDD /* PostHandlerUITests.swift */; };
 		558EA56A289CF16A0052DCDD /* PostHandlerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA569289CF16A0052DCDD /* PostHandlerUITestsLaunchTests.swift */; };
+		558EA57C289CF6C80052DCDD /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA57B289CF6C80052DCDD /* PostListTableViewController.swift */; };
+		558EA580289CF6FB0052DCDD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA57F289CF6FB0052DCDD /* APIService.swift */; };
+		558EA584289CFC7B0052DCDD /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA583289CFC7B0052DCDD /* Posts.swift */; };
+		558EA588289D02E90052DCDD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA587289D02E90052DCDD /* Environment.swift */; };
+		558EA58A289D0F080052DCDD /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA589289D0F080052DCDD /* ErrorHandler.swift */; };
+		558EA58D289D1E920052DCDD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA58C289D1E920052DCDD /* SearchView.swift */; };
+		558EA58F289D1EA60052DCDD /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558EA58E289D1EA60052DCDD /* SearchView.xib */; };
+		58B1F1A86E34FE048219647A /* Pods_PostHandlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A609002C41CD7FBCBF37E4FE /* Pods_PostHandlerTests.framework */; };
+		ECEBE62C21967DD819085A87 /* Pods_PostHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4594E10A026463CC42C001B1 /* Pods_PostHandler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DF82F5A0A5D2B5C9C4C48A7 /* Pods_PostHandler_PostHandlerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostHandler_PostHandlerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F65F42A28BA6DCCE1CCA1A4 /* Pods-PostHandlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandlerTests.debug.xcconfig"; path = "Target Support Files/Pods-PostHandlerTests/Pods-PostHandlerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		43760078B06B6BE5818454D2 /* Pods-PostHandler-PostHandlerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandler-PostHandlerUITests.release.xcconfig"; path = "Target Support Files/Pods-PostHandler-PostHandlerUITests/Pods-PostHandler-PostHandlerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4594E10A026463CC42C001B1 /* Pods_PostHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BD622228A72E1E910FE923E /* Pods-PostHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandler.debug.xcconfig"; path = "Target Support Files/Pods-PostHandler/Pods-PostHandler.debug.xcconfig"; sourceTree = "<group>"; };
 		558EA543289CF1670052DCDD /* PostHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558EA546289CF1670052DCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		558EA548289CF1670052DCDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		558EA54A289CF1670052DCDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		558EA54D289CF1670052DCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		558EA54F289CF1690052DCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		558EA552289CF1690052DCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +62,17 @@
 		558EA563289CF16A0052DCDD /* PostHandlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostHandlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558EA567289CF16A0052DCDD /* PostHandlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHandlerUITests.swift; sourceTree = "<group>"; };
 		558EA569289CF16A0052DCDD /* PostHandlerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHandlerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		558EA57B289CF6C80052DCDD /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		558EA57F289CF6FB0052DCDD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		558EA583289CFC7B0052DCDD /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		558EA587289D02E90052DCDD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		558EA589289D0F080052DCDD /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		558EA58C289D1E920052DCDD /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		558EA58E289D1EA60052DCDD /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		8AEDE40D207CC69DB2F65764 /* Pods-PostHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandler.release.xcconfig"; path = "Target Support Files/Pods-PostHandler/Pods-PostHandler.release.xcconfig"; sourceTree = "<group>"; };
+		A565D0E29884CCB434529098 /* Pods-PostHandlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandlerTests.release.xcconfig"; path = "Target Support Files/Pods-PostHandlerTests/Pods-PostHandlerTests.release.xcconfig"; sourceTree = "<group>"; };
+		A609002C41CD7FBCBF37E4FE /* Pods_PostHandlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostHandlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B439F5D5D16144602B8188 /* Pods-PostHandler-PostHandlerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandler-PostHandlerUITests.debug.xcconfig"; path = "Target Support Files/Pods-PostHandler-PostHandlerUITests/Pods-PostHandler-PostHandlerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEBE62C21967DD819085A87 /* Pods_PostHandler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B1F1A86E34FE048219647A /* Pods_PostHandlerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5347F3A6CA0FA598810B0819 /* Pods_PostHandler_PostHandlerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EF93C0A18EB53AD9FFC223B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4594E10A026463CC42C001B1 /* Pods_PostHandler.framework */,
+				0DF82F5A0A5D2B5C9C4C48A7 /* Pods_PostHandler_PostHandlerUITests.framework */,
+				A609002C41CD7FBCBF37E4FE /* Pods_PostHandlerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		558EA53A289CF1670052DCDD = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +120,8 @@
 				558EA55C289CF16A0052DCDD /* PostHandlerTests */,
 				558EA566289CF16A0052DCDD /* PostHandlerUITests */,
 				558EA544289CF1670052DCDD /* Products */,
+				60E5F9B15FD4B86BF980B7C1 /* Pods */,
+				4EF93C0A18EB53AD9FFC223B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +138,13 @@
 		558EA545289CF1670052DCDD /* PostHandler */ = {
 			isa = PBXGroup;
 			children = (
-				558EA546289CF1670052DCDD /* AppDelegate.swift */,
-				558EA548289CF1670052DCDD /* SceneDelegate.swift */,
-				558EA54A289CF1670052DCDD /* ViewController.swift */,
+				558EA58B289D1E640052DCDD /* Custom View */,
+				558EA57D289CF6DA0052DCDD /* Table View Cells */,
+				558EA57A289CF6990052DCDD /* Common */,
+				558EA579289CF6760052DCDD /* API Service */,
+				558EA578289CF64B0052DCDD /* Models */,
+				558EA577289CF63D0052DCDD /* ViewModels  */,
+				558EA576289CF5F10052DCDD /* Controller */,
 				558EA54C289CF1670052DCDD /* Main.storyboard */,
 				558EA54F289CF1690052DCDD /* Assets.xcassets */,
 				558EA551289CF1690052DCDD /* LaunchScreen.storyboard */,
@@ -127,6 +170,77 @@
 			path = PostHandlerUITests;
 			sourceTree = "<group>";
 		};
+		558EA576289CF5F10052DCDD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				558EA57B289CF6C80052DCDD /* PostListTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		558EA577289CF63D0052DCDD /* ViewModels  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ViewModels ";
+			sourceTree = "<group>";
+		};
+		558EA578289CF64B0052DCDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				558EA583289CFC7B0052DCDD /* Posts.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		558EA579289CF6760052DCDD /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+				558EA587289D02E90052DCDD /* Environment.swift */,
+				558EA57F289CF6FB0052DCDD /* APIService.swift */,
+				558EA589289D0F080052DCDD /* ErrorHandler.swift */,
+			);
+			path = "API Service";
+			sourceTree = "<group>";
+		};
+		558EA57A289CF6990052DCDD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				558EA546289CF1670052DCDD /* AppDelegate.swift */,
+				558EA548289CF1670052DCDD /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		558EA57D289CF6DA0052DCDD /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		558EA58B289D1E640052DCDD /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				558EA58C289D1E920052DCDD /* SearchView.swift */,
+				558EA58E289D1EA60052DCDD /* SearchView.xib */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		60E5F9B15FD4B86BF980B7C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BD622228A72E1E910FE923E /* Pods-PostHandler.debug.xcconfig */,
+				8AEDE40D207CC69DB2F65764 /* Pods-PostHandler.release.xcconfig */,
+				A8B439F5D5D16144602B8188 /* Pods-PostHandler-PostHandlerUITests.debug.xcconfig */,
+				43760078B06B6BE5818454D2 /* Pods-PostHandler-PostHandlerUITests.release.xcconfig */,
+				2F65F42A28BA6DCCE1CCA1A4 /* Pods-PostHandlerTests.debug.xcconfig */,
+				A565D0E29884CCB434529098 /* Pods-PostHandlerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 558EA56D289CF16A0052DCDD /* Build configuration list for PBXNativeTarget "PostHandler" */;
 			buildPhases = (
+				7F1F01255CAF7A921630F0EC /* [CP] Check Pods Manifest.lock */,
 				558EA53F289CF1670052DCDD /* Sources */,
 				558EA540289CF1670052DCDD /* Frameworks */,
 				558EA541289CF1670052DCDD /* Resources */,
+				558EA585289CFE580052DCDD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -151,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 558EA570289CF16A0052DCDD /* Build configuration list for PBXNativeTarget "PostHandlerTests" */;
 			buildPhases = (
+				73C556A2BBF8CE566FB16B16 /* [CP] Check Pods Manifest.lock */,
 				558EA555289CF16A0052DCDD /* Sources */,
 				558EA556289CF16A0052DCDD /* Frameworks */,
 				558EA557289CF16A0052DCDD /* Resources */,
@@ -169,6 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 558EA573289CF16A0052DCDD /* Build configuration list for PBXNativeTarget "PostHandlerUITests" */;
 			buildPhases = (
+				71FE9689FBD8BF00E41D56E1 /* [CP] Check Pods Manifest.lock */,
 				558EA55F289CF16A0052DCDD /* Sources */,
 				558EA560289CF16A0052DCDD /* Frameworks */,
 				558EA561289CF16A0052DCDD /* Resources */,
@@ -231,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558EA58F289D1EA60052DCDD /* SearchView.xib in Resources */,
 				558EA553289CF1690052DCDD /* LaunchScreen.storyboard in Resources */,
 				558EA550289CF1690052DCDD /* Assets.xcassets in Resources */,
 				558EA54E289CF1670052DCDD /* Main.storyboard in Resources */,
@@ -253,14 +372,106 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		558EA585289CFE580052DCDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		71FE9689FBD8BF00E41D56E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PostHandler-PostHandlerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73C556A2BBF8CE566FB16B16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PostHandlerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F1F01255CAF7A921630F0EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PostHandler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		558EA53F289CF1670052DCDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				558EA54B289CF1670052DCDD /* ViewController.swift in Sources */,
+				558EA584289CFC7B0052DCDD /* Posts.swift in Sources */,
+				558EA580289CF6FB0052DCDD /* APIService.swift in Sources */,
+				558EA588289D02E90052DCDD /* Environment.swift in Sources */,
 				558EA547289CF1670052DCDD /* AppDelegate.swift in Sources */,
+				558EA58D289D1E920052DCDD /* SearchView.swift in Sources */,
+				558EA58A289D0F080052DCDD /* ErrorHandler.swift in Sources */,
 				558EA549289CF1670052DCDD /* SceneDelegate.swift in Sources */,
+				558EA57C289CF6C80052DCDD /* PostListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +643,7 @@
 		};
 		558EA56E289CF16A0052DCDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BD622228A72E1E910FE923E /* Pods-PostHandler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +672,7 @@
 		};
 		558EA56F289CF16A0052DCDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AEDE40D207CC69DB2F65764 /* Pods-PostHandler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +701,7 @@
 		};
 		558EA571289CF16A0052DCDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F65F42A28BA6DCCE1CCA1A4 /* Pods-PostHandlerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +722,7 @@
 		};
 		558EA572289CF16A0052DCDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A565D0E29884CCB434529098 /* Pods-PostHandlerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +743,7 @@
 		};
 		558EA574289CF16A0052DCDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B439F5D5D16144602B8188 /* Pods-PostHandler-PostHandlerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +762,7 @@
 		};
 		558EA575289CF16A0052DCDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43760078B06B6BE5818454D2 /* Pods-PostHandler-PostHandlerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

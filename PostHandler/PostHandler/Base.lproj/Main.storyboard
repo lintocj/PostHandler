@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Osm-A2-knv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,17 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Posts-->
         <scene sceneID="LOM-CJ-iwW">
             <objects>
-                <viewController id="MpT-DM-YoV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MpT-DM-YoV" customClass="PostListViewController" customModule="PostHandler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CMU-Fd-eKa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxf-Tk-HHl" customClass="SearchView" customModule="PostHandler" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Uh0-Uj-H9a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Kk8-HJ-M5h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vxf-Tk-HHl" firstAttribute="top" secondItem="Kk8-HJ-M5h" secondAttribute="top" id="WA0-GH-9Uv"/>
+                            <constraint firstItem="vxf-Tk-HHl" firstAttribute="leading" secondItem="Kk8-HJ-M5h" secondAttribute="leading" id="X45-m9-QCm"/>
+                            <constraint firstItem="Kk8-HJ-M5h" firstAttribute="trailing" secondItem="vxf-Tk-HHl" secondAttribute="trailing" id="nNK-8u-z56"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UWz-BA-k0R"/>
+                    <navigationItem key="navigationItem" title="Posts" id="UWz-BA-k0R"/>
+                    <connections>
+                        <outlet property="headerView" destination="vxf-Tk-HHl" id="ciH-pS-5qH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGf-NT-ieN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,9 +46,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Osm-A2-knv" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IgA-hU-DR7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IgA-hU-DR7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

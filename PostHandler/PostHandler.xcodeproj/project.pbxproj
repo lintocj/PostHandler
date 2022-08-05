@@ -16,13 +16,13 @@
 		558EA55E289CF16A0052DCDD /* PostHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA55D289CF16A0052DCDD /* PostHandlerTests.swift */; };
 		558EA568289CF16A0052DCDD /* PostHandlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA567289CF16A0052DCDD /* PostHandlerUITests.swift */; };
 		558EA56A289CF16A0052DCDD /* PostHandlerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA569289CF16A0052DCDD /* PostHandlerUITestsLaunchTests.swift */; };
-		558EA57C289CF6C80052DCDD /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA57B289CF6C80052DCDD /* PostListTableViewController.swift */; };
 		558EA580289CF6FB0052DCDD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA57F289CF6FB0052DCDD /* APIService.swift */; };
 		558EA584289CFC7B0052DCDD /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA583289CFC7B0052DCDD /* Posts.swift */; };
 		558EA588289D02E90052DCDD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA587289D02E90052DCDD /* Environment.swift */; };
 		558EA58A289D0F080052DCDD /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA589289D0F080052DCDD /* ErrorHandler.swift */; };
 		558EA58D289D1E920052DCDD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA58C289D1E920052DCDD /* SearchView.swift */; };
 		558EA58F289D1EA60052DCDD /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558EA58E289D1EA60052DCDD /* SearchView.xib */; };
+		558EA591289D21EF0052DCDD /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA590289D21EF0052DCDD /* PostListViewController.swift */; };
 		58B1F1A86E34FE048219647A /* Pods_PostHandlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A609002C41CD7FBCBF37E4FE /* Pods_PostHandlerTests.framework */; };
 		ECEBE62C21967DD819085A87 /* Pods_PostHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4594E10A026463CC42C001B1 /* Pods_PostHandler.framework */; };
 /* End PBXBuildFile section */
@@ -62,13 +62,13 @@
 		558EA563289CF16A0052DCDD /* PostHandlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostHandlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558EA567289CF16A0052DCDD /* PostHandlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHandlerUITests.swift; sourceTree = "<group>"; };
 		558EA569289CF16A0052DCDD /* PostHandlerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHandlerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		558EA57B289CF6C80052DCDD /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
 		558EA57F289CF6FB0052DCDD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		558EA583289CFC7B0052DCDD /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		558EA587289D02E90052DCDD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		558EA589289D0F080052DCDD /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		558EA58C289D1E920052DCDD /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		558EA58E289D1EA60052DCDD /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		558EA590289D21EF0052DCDD /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		8AEDE40D207CC69DB2F65764 /* Pods-PostHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandler.release.xcconfig"; path = "Target Support Files/Pods-PostHandler/Pods-PostHandler.release.xcconfig"; sourceTree = "<group>"; };
 		A565D0E29884CCB434529098 /* Pods-PostHandlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostHandlerTests.release.xcconfig"; path = "Target Support Files/Pods-PostHandlerTests/Pods-PostHandlerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A609002C41CD7FBCBF37E4FE /* Pods_PostHandlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostHandlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +173,7 @@
 		558EA576289CF5F10052DCDD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				558EA57B289CF6C80052DCDD /* PostListTableViewController.swift */,
+				558EA590289D21EF0052DCDD /* PostListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -464,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558EA591289D21EF0052DCDD /* PostListViewController.swift in Sources */,
 				558EA584289CFC7B0052DCDD /* Posts.swift in Sources */,
 				558EA580289CF6FB0052DCDD /* APIService.swift in Sources */,
 				558EA588289D02E90052DCDD /* Environment.swift in Sources */,
@@ -471,7 +472,6 @@
 				558EA58D289D1E920052DCDD /* SearchView.swift in Sources */,
 				558EA58A289D0F080052DCDD /* ErrorHandler.swift in Sources */,
 				558EA549289CF1670052DCDD /* SceneDelegate.swift in Sources */,
-				558EA57C289CF6C80052DCDD /* PostListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

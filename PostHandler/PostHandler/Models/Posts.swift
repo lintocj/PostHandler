@@ -21,8 +21,6 @@ struct Posts: Codable {
   var title: String?
   var id: Int?
 
-
-
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     body = try container.decodeIfPresent(String.self, forKey: .body)

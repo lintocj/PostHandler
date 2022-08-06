@@ -41,8 +41,14 @@ class SearchView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.searchBar.searchTextField.backgroundColor = .clear
     }
+
+    /// Used for placeHolder Updation from Parent View
+    func placeHolderUpdation(placeHolder: String) {
+        self.searchBar.placeholder = placeHolder
+    }
 }
 
+// MARK: Search Bar Delegation
 extension SearchView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("searchText \(searchText)")

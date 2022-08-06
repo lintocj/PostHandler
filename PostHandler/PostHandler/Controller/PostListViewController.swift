@@ -12,6 +12,7 @@ class PostListViewController: UIViewController {
     @IBOutlet weak var searchView: SearchView! {
         didSet {
             searchView.delegate = self
+            searchView.placeHolderUpdation(placeHolder: "Search For Posts")
         }
     }
     @IBOutlet weak var tableView: UITableView!
@@ -70,9 +71,8 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostListTableViewCell.identifier, for: indexPath) as? PostListTableViewCell else {
             return UITableViewCell()
         }
-        if let userInfo = self.postData?[indexPath.row] {
-            cell.textLabel?.text = userInfo.title
-            cell.textLabel?.numberOfLines = 0
+        if let postInfo = self.postData?[indexPath.row] {
+            cell.postInfo = postInfo
         }
         return cell
     }
@@ -81,22 +81,12 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
         if let post = self.postData?[indexPath.row] {
             self.moveToPostDetailedViewController(postData: post)
         }
-
     }
 }
 
 extension PostListViewController: searchDelegate {
     func didSearchResult(searchText: String?) {
-        if let searchText = searchText, searchText != "" {
-            self.postData = originalpostData?.filter { (postList) -> Bool in
-                if let title = postList.title {
-                    return title.localizedCaseInsensitiveContains(searchText)
-                }
-                return false
-            }
-        } else {
-            self.postData = originalpostData
-        }
+        self.postData = PostDataViewModel.searchDataHandler(searchText: searchText, orignalData: self.originalpostData)
         self.tableView.reloadData()
     }
 }

@@ -23,4 +23,21 @@ struct PostDataViewModel {
             completionHandler(.error(error.localizedDescription))
         }
     }
+
+    static func searchDataHandler(searchText: String?, orignalData: [Posts]?) -> [Posts]? {
+        guard let orignalData = orignalData else {
+            return nil
+        }
+        if let searchText = searchText, searchText != "" {
+            return orignalData.filter { (postList) -> Bool in
+                if let title = postList.title, let body = postList.body {
+                    let finalSearch = title + body
+                    return finalSearch.localizedCaseInsensitiveContains(searchText)
+                }
+                return false
+            }
+        } else {
+            return orignalData
+        }
+    }
 }

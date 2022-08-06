@@ -21,11 +21,11 @@ class CommentTableViewCell: UITableViewCell {
 
     var commentInfo: Comments? {
         didSet {
-            setUIUpdation()
+            setUIElements()
         }
     }
 
-    func setUIUpdation() {
+    func setUIElements() {
         lblTitle.text = commentInfo?.name
         lblEmailID.text = commentInfo?.email
         lblDesc.text = commentInfo?.body
@@ -38,7 +38,6 @@ class CommentTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

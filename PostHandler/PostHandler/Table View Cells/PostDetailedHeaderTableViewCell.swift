@@ -11,6 +11,7 @@ class PostDetailedHeaderTableViewCell: UITableViewHeaderFooterView {
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var btnComment: UIButton!
 
     static var nib: UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -21,13 +22,18 @@ class PostDetailedHeaderTableViewCell: UITableViewHeaderFooterView {
 
     var postDataUpdate: Posts? {
         didSet {
-            setUpUI()
+            setUIElements()
         }
     }
 
-    func setUpUI() {
+    func setUIElements() {
         lblTitle.text = postDataUpdate?.title
         lblDesc.text = postDataUpdate?.body
     }
 
+    var settotalComment: Int = 0 {
+        didSet {
+            btnComment.setTitle(" \(settotalComment)", for: .normal)
+        }
+    }
 }

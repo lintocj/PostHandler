@@ -21,25 +21,28 @@ class PostDetailedViewController: UIViewController {
     @IBOutlet weak var searchView: SearchView! {
         didSet {
             searchView.delegate = self
+            searchView.placeHolderUpdation(placeHolder: "Search For Comments")
         }
     }
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
+        didSet {
+            activityIndicator.hidesWhenStopped = true
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         apiHandler()
     }
     
     // MARK: API Call Handle
     func apiHandler() {
-        //self.activityIndicator.startAnimating()
+        self.activityIndicator.startAnimating()
         let postId = String(describing: postInfo?.id ?? 0)
         CommentDataViewModel.getCommentData(postId: postId) { response in
             switch response {
             case .success(let comment):
-                self.showAlert(title: "Success")
                 DispatchQueue.main.async {
-                    //self.activityIndicator.stopAnimating()
+                    self.activityIndicator.stopAnimating()
                     self.commentData = comment
                     self.originalCommentData = comment
                     self.tableView.isHidden = self.commentData?.isEmpty == true || self.commentData == nil ? true : false
@@ -76,6 +79,7 @@ extension PostDetailedViewController: UITableViewDelegate, UITableViewDataSource
             return UITableViewCell()
         }
         cell.postDataUpdate = postInfo
+        cell.settotalComment = commentData?.count ?? 0
         return cell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -85,17 +89,7 @@ extension PostDetailedViewController: UITableViewDelegate, UITableViewDataSource
 }
 extension PostDetailedViewController: searchDelegate {
     func didSearchResult(searchText: String?) {
-        if let searchText = searchText, searchText != "" {
-            self.commentData = originalCommentData?.filter { (postList) -> Bool in
-                if let name = postList.name, let emailId = postList.email, let body = postList.body {
-                    let final = name + emailId + body
-                    return final.localizedCaseInsensitiveContains(searchText)
-                }
-                return false
-            }
-        } else {
-            self.commentData = originalCommentData
-        }
+        self.commentData = CommentDataViewModel.searchDataHandler(searchText: searchText, orignalData: self.originalCommentData)
         self.tableView.reloadData()
     }
 }

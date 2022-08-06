@@ -34,4 +34,21 @@ struct CommentDataViewModel {
 
         return components?.url?.absoluteString
     }
+
+    static func searchDataHandler(searchText: String?, orignalData: [Comments]?) -> [Comments]? {
+        guard let orignalData = orignalData else {
+            return nil
+        }
+        if let searchText = searchText, searchText != "" {
+            return orignalData.filter { (postList) -> Bool in
+                if let name = postList.name, let emailId = postList.email, let body = postList.body {
+                    let final = name + emailId + body
+                    return final.localizedCaseInsensitiveContains(searchText)
+                }
+                return false
+            }
+        } else {
+            return orignalData
+        }
+    }
 }
